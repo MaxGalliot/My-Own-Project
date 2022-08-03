@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `My Own Website`,
+    description: 'My website with REACT',
+    author: 'Maxime GALLIOT',
   },
   plugins: [],
 }

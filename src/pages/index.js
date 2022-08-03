@@ -1,4 +1,5 @@
 import * as React from "react"
+import { Link } from "gatsby"
 
 // styles
 const pageStyles = {
@@ -78,6 +79,7 @@ const badgeStyle = {
   lineHeight: 1,
 }
 
+
 // data
 const links = [
   {
@@ -125,6 +127,16 @@ const links = [
   },
 ]
 
+const myPageLinks = [
+  {
+    text: "Page 2",
+    url: "../second-page/page-2",
+    badge: false,
+    description:
+      "My own page 2",
+  },
+]
+
 // markup
 const IndexPage = () => {
   return (
@@ -145,6 +157,14 @@ const IndexPage = () => {
           😎
         </span>
       </p>
+      <p style={linkStyle}>
+        {myPageLinks.map((link, i) => (
+          <React.Fragment key={link.url}>
+            <Link to={link.url}>{link.text}</Link>
+          </React.Fragment>
+        ))}
+      </p>
+
       <ul style={listStyles}>
         <li style={docLinkStyle}>
           <a
